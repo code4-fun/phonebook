@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 public class ApiTests {
   /**
-   * Tests that the endpoint returns 2xx status code
+   * Tests that the endpoint returns 200 status code
    * and the header Content-Type: application/json is present.
    */
   @Test()
@@ -23,7 +23,7 @@ public class ApiTests {
   }
 
   /**
-   * Tests creation of new user.
+   * Tests the creation of new user.
    */
   @Test
   public void createNewUserTest(){
@@ -38,8 +38,8 @@ public class ApiTests {
   }
 
   /**
-   * Tests that creation of new user is impossible without
-   * firstName field.
+   * Tests that the creation of new user is impossible without
+   * the firstName field.
    */
   @Test
   public void unableToCreateNewUserTest(){
@@ -56,9 +56,9 @@ public class ApiTests {
   }
 
   /**
-   * Tests the user delete endpoint.
-   * To make sure the deleted object exists it is created first
-   * in this same method.
+   * Tests the deleting of the user.
+   * To make sure the user to be deleted exists in the
+   * database it is created first.
    */
   @Test
   public void deleteUserTest(){
@@ -84,7 +84,7 @@ public class ApiTests {
   }
 
   /**
-   * Tests the search user endpoint.
+   * Tests the searching of the user.
    * Before searching user by its name the user is created.
    */
   @Test
@@ -108,8 +108,8 @@ public class ApiTests {
   }
 
   /**
-   * Tests the contact creation endpoint.
-   * First created user then created contact of this user.
+   * Tests the creation of the contact.
+   * First the user is created then the contact id added to this user.
    */
   @Test
   public void createContactTest(){
@@ -144,7 +144,7 @@ public class ApiTests {
 
   /**
    * Tests that the contact cannot be created since the
-   * phone and email provided has the wrong format.
+   * phone and the email provided have a wrong format.
    */
   @Test
   public void unableCreateContactTest(){
